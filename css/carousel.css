@@ -1,3 +1,22 @@
+:root {
+    --color-1: #456584;
+    --color-2: #3e5975;
+    --color-3: #6e94b9;
+    --color-4: #b1d1f1;
+    --color-5: #f09510;
+    --color-6: #f9d36c;
+    --color-7: #e38354;
+    --color-8: #e89d6d;
+    --color-fondo: #eaeef4;
+    --color-complementario-I : #E5507A;
+    --color-complementario-II : #ef7d9a;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-blanco: #fff;
+    --color-negro: #000;
+}
+
 .petCarousel{
     height: 250px;
     object-fit: cover;
@@ -20,9 +39,52 @@
     color: var(--color-blanco);
 }
 
-.text-carrusel h2 {
-    font-size: 2rem;
+.text-carrusel .titulo-carrusel {
+    font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
+}
+
+.btn-p-slider-1 {
+    background-color: var(--color-complementario-I);
+    color: var(--color-blanco);
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.btn-p-slider-1:hover {
+    background-color: var(--color-complementario-II);
+    color: var(--color-blanco);
+}
+
+.btn-p-slider-2 {
+    background-color: var(--color-7);
+    color: var(--color-negro);
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.btn-p-slider-2:hover {
+    background-color: var(--color-8);
+    color: var(--color-negro);
+}
+
+.btn-p-slider-3 {
+    background-color: var(--color-5);
+    color: var(--color-negro);
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.btn-p-slider-3:hover {
+    background-color: var(--color-6);
+    color: var(--color-negro);
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){
@@ -32,11 +94,24 @@
 
     .text-carrusel {
         width: 80%;
-
     }
 
-    .text-carrusel h2 {
-        font-size: 4rem;
+    .text-carrusel .titulo-carrusel {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .btn-p-slider-1 {
+        font-size: 1rem;
+    }
+
+    .btn-p-slider-2 {
+        font-size: 1rem;
+    }
+
+    .btn-p-slider-3 {
+        font-size: 1rem;
     }
 }
 
@@ -49,7 +124,21 @@
         width: 70%;
     }
 
-    .text-carrusel h2 {
-        font-size: 2.5rem;
+    .text-carrusel .titulo-carrusel {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .btn-p-slider-1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-p-slider-2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-p-slider-3 {
+        font-size: 1.5rem;
     }
 }
