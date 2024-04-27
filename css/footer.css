@@ -48,6 +48,7 @@ footer .section-1{
     background-color: var(--color-blanco);
     border-radius: 50%;
     padding: 5px;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
 }
 
 .section-1 .box-logo a div img{

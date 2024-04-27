@@ -46,6 +46,7 @@
     align-items: start;
     justify-content: center;
     background-color: var(--color-blanco);
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
 }
 
 .tip-d .image-mascota{
@@ -88,6 +89,7 @@
     justify-content: center;
     flex-direction: row-reverse;
     background-color: var(--color-blanco);
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
 }
 
 .tip-i .image-mascota{
