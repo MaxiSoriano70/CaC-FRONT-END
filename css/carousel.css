@@ -1,15 +1,15 @@
 :root {
-    --color-1: #456584;
-    --color-2: #3e5975;
+    --color-1: #223d58;
+    --color-2: #3e6389;
     --color-3: #6e94b9;
     --color-4: #b1d1f1;
-    --color-5: #f09510;
-    --color-6: #f9d36c;
-    --color-7: #e38354;
-    --color-8: #e89d6d;
+    --color-5: #005757;
+    --color-6: #1c7373;
+    --color-7: #ab5408;
+    --color-8: #b45908;
     --color-fondo: #eaeef4;
-    --color-complementario-I : #E5507A;
-    --color-complementario-II : #ef7d9a;
+    --color-complementario-I : #b81941;
+    --color-complementario-II : #ce1d49;
     --color-success: #28a745;
     --color-warning: #ffc107;
     --color-danger: #dc3545;
@@ -61,7 +61,7 @@
 
 .btn-p-slider-2 {
     background-color: var(--color-7);
-    color: var(--color-negro);
+    color: var(--color-blanco);
     padding: 10px;
     margin-top: 10px;
     font-weight: bolder;
@@ -70,12 +70,12 @@
 
 .btn-p-slider-2:hover {
     background-color: var(--color-8);
-    color: var(--color-negro);
+    color: var(--color-blanco);
 }
 
 .btn-p-slider-3 {
     background-color: var(--color-5);
-    color: var(--color-negro);
+    color: var(--color-blanco);
     padding: 10px;
     margin-top: 10px;
     font-weight: bolder;
@@ -84,7 +84,7 @@
 
 .btn-p-slider-3:hover {
     background-color: var(--color-6);
-    color: var(--color-negro);
+    color: var(--color-blanco);
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){

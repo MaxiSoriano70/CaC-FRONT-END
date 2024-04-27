@@ -1,15 +1,15 @@
 :root {
-    --color-1: #456584;
-    --color-2: #3e5975;
+    --color-1: #223d58;
+    --color-2: #3e6389;
     --color-3: #6e94b9;
     --color-4: #b1d1f1;
-    --color-5: #f09510;
-    --color-6: #f9d36c;
-    --color-7: #e38354;
-    --color-8: #e89d6d;
+    --color-5: #1c7373;
+    --color-6: #005757;
+    --color-7: #b45908;
+    --color-8: #ab5408;
     --color-fondo: #eaeef4;
-    --color-complementario-I : #E5507A;
-    --color-complementario-II : #ef7d9a;
+    --color-complementario-I : #ce1d49;
+    --color-complementario-II : #b81941;
     --color-success: #28a745;
     --color-warning: #ffc107;
     --color-danger: #dc3545;
@@ -105,7 +105,7 @@
     position: absolute;
     width: 400px;
     height: 200px;
-    background: linear-gradient(to right, var(--color-2), var(--color-3));
+    background: linear-gradient(to right, var(--color-1), var(--color-2));
     transform: rotate(-35deg);
     top: -50px;
     left: -100px;
@@ -151,7 +151,7 @@
     text-transform: capitalize;
     font-size: 1rem;
     background-color: var(--color-5);
-    color: var(--color-negro);
+    color: var(--color-blanco);
     border: none;
     padding: 10px;
     border-radius: 15px;
@@ -170,7 +170,7 @@
     text-transform: capitalize;
     font-size: 1rem;
     background-color: var(--color-7);
-    color: var(--color-negro);
+    color: var(--color-blanco);
     border: none;
     padding: 10px;
     border-radius: 15px;

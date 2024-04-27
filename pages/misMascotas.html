@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ecommerce PetShop" />
+    <meta name="description" content="Carnet de Vacunas para tu Canino o Felino" />
     <meta name="author" content="Maximiliano Soriano" />
-    <meta name="keywords" content="PetShop" />
+    <meta name="keywords" content="Carnet Vacunas para mascotas, vacunas de canino, vacunas de felino, vacunas para un perro, vacunas para un gato" />
     <!-- Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fuente Google-->
@@ -24,13 +24,13 @@
     <link rel="stylesheet" href="../css/publicidadClinica.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/bootstrap-personalizado.css">
-    <title>CarnetPeludos</title>
+    <title>CarnetVet</title>
 </head>
 <body class="container-fluid p-0">
     <header>
         <section class="contenedor">
             <article class="logo">
-                <a href="../index.html">
+                <a href="../index.html" aria-label="Logo y nombre">
                     <img src="../img/Logo.png" alt="Logo PetShop">
                     <p>PetShop</p>
                 </a>
@@ -38,51 +38,51 @@
             <nav class="menu">
                 <article class="head">
                     <div class="logo">
-                        <a href="../index.html">
+                        <a href="../index.html" aria-label="Logo y nombre">
                             <img src="../img/Logo.png" alt="Logo PetShop">
                             <p>PetShop</p>
                         </a>
                     </div>
-                    <button type="button" class="close-menu-btn"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button type="button" class="close-menu-btn" aria-label="Cerrar menu"><i class="fa-regular fa-circle-xmark"></i></button>
                 </article>
                 <ul>
                     <li>
-                        <a href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+                        <a href="../index.html"><i class="fa-solid fa-house" aria-label="Home"></i> Home</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" onclick="event.preventDefault()"><i class="fa-solid fa-syringe"></i> Vacunas</a>
+                        <a href="#" aria-label="Vacunas" onclick="event.preventDefault()"><i class="fa-solid fa-syringe"></i> Vacunas</a>
                         <i class="fa-solid fa-caret-down"></i>
                         <ul class="submenu">
-                            <li><a href="#"><span><i class="fa-solid fa-dog"></i> Caninos</span></a></li>
-                            <li><a href="#"><span><i class="fa-solid fa-cat"></i> Felinos</span></a></li>
+                            <li><a href="#" aria-label="Caninos"><span><i class="fa-solid fa-dog"></i> Caninos</span></a></li>
+                            <li><a href="#" aria-label="Felinos"><span><i class="fa-solid fa-cat"></i> Felinos</span></a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" onclick="event.preventDefault()"><i class="fa-solid fa-envelope"></i> Contacto</a>
+                        <a href="#" aria-label="Contacto" onclick="event.preventDefault()"><i class="fa-solid fa-envelope"></i> Contacto</a>
                         <i class="fa-solid fa-caret-down"></i>
                         <ul class="submenu">
-                            <li><a href="#"><span><i class="fa-brands fa-whatsapp"></i> Whatsapp</span></a></li>
-                            <li><a href="#"><span><i class="fa-brands fa-instagram"></i> Instragram</span></a></li>
-                            <li><a href="#"><span><i class="fa-brands fa-facebook"></i> Facebook</span></a></li>
+                            <li><a href="#" aria-label="Whatsapp"><span><i class="fa-brands fa-whatsapp"></i> Whatsapp</span></a></li>
+                            <li><a href="#" aria-label="Instragram"><span><i class="fa-brands fa-instagram"></i> Instragram</span></a></li>
+                            <li><a href="#" aria-label="Facebook"><span><i class="fa-brands fa-facebook"></i> Facebook</span></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-solid fa-circle-info"></i> A cerca de nosotros</a>
+                        <a href="#" aria-label="A cerca de nosotros"><i class="fa-solid fa-circle-info"></i> A cerca de nosotros</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" onclick="event.preventDefault()"><i class="fa-solid fa-user"></i> Karen Dominguez</a>
+                        <a href="#" aria-label="Nombre usuario" onclick="event.preventDefault()"><i class="fa-solid fa-user"></i> Karen Dominguez</a>
                         <i class="fa-solid fa-caret-down"></i>
                         <ul class="submenu">
                             <!-- Button modal Editar Perfil-->
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#editarPerfilModal"><span><i class="fa-solid fa-user-pen"></i> Datos Personales</span></a></li>
-                            <li><a href="misMascotas.html"><span><i class="fa-solid fa-paw"></i> Mis mascotas</span></a></li>
-                            <li><a href="#" onclick="cerrarSesion()"><span><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</span></a></li>
+                            <li><a href="#" aria-label="Datos Personales" data-bs-toggle="modal" data-bs-target="#editarPerfilModal"><span><i class="fa-solid fa-user-pen"></i> Datos Personales</span></a></li>
+                            <li><a href="misMascotas.html" aria-label="Mis mascotas"><span><i class="fa-solid fa-paw"></i> Mis mascotas</span></a></li>
+                            <li><a href="#" aria-label="Cerrar Sesión" onclick="cerrarSesion()"><span><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</span></a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
             <article class="header-rigth">
-                <button type="button" class="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
+                <button type="button" aria-label="Menu" class="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
             </article>
         </section>
     </header>
@@ -120,7 +120,7 @@
                 <h2>Tus mascotas</h2>
             </article>
             <article class="agregar-mascota">
-                <button type="button" class="btn btn-success fw-bolder fs-6" data-bs-toggle="modal" data-bs-target="#agregarMascotaModal"><i class="fa-solid fa-circle-plus"></i> Agregar Mascota</button>
+                <button type="button" class="btn btn-success fw-bolder fs-6" data-bs-toggle="modal" data-bs-target="#agregarMascotaModal"><i class="fa-solid fa-circle-plus" aria-label="Agregar Mascota"></i> Agregar Mascota</button>
             </article>
             <article class="contenedor-mascotas">
                 <div class="card" data-aos="zoom-in">
@@ -132,10 +132,10 @@
                         <h4>Roco</h4>
                         <h5 class="al-dia">Vacunas completas</h5>
                         <div class="botones-mascotas">
-                            <a class="btn-carnet" href="">
+                            <a class="btn-carnet" href="#" aria-label="Ver carnet">
                                 <i class="fa-solid fa-syringe"></i> Ver carnet
                             </a>
-                            <a class="btn-editar-mascota" href="">
+                            <a class="btn-editar-mascota" href="#" aria-label="Editar Mascota">
                                 <i class="fa-solid fa-pen-to-square"></i> Editar
                             </a>
                         </div>
@@ -223,7 +223,7 @@
 
         <!-- Publicidad clinica -->
         <section class="clinica">
-            <a class="link-clinica" href="#" target="_blank" data-aos="flip-up">
+            <a class="link-clinica" href="#" target="_blank" data-aos="flip-up" aria-label="Clinica Veterinaria">
                 <img class="img-clinica-1" src="../img/clinica-1.jpg" alt="clinica-veterinaria-1">
                 <img class="img-clinica-2" src="../img/clinica-2.jpg" alt="clinica-veterinaria-2">
             </a>
@@ -267,7 +267,7 @@
                                 maxlength="20" minlength="8" required>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
-                                <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold">Guardar Cambios</button>
+                                <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold" aria-label="Guardar Cambios">Guardar Cambios</button>
                                 <button type="button" class="btn btn-personalized-1 mx-1 fw-bold" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                             </div>
                         </form>
@@ -355,11 +355,11 @@
                                 <div class="form-floating">
                                     <textarea class="form-control bg-input" placeholder="Ingrese observaciones" id="observaciones" style="height: 100px"></textarea>
                                     <label for="observaciones">Observaciones</label>
-                                  </div>
+                                </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
-                                <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold">Registrarse</button>
-                                <button type="reset" class="btn btn-personalized-1 mx-1 fw-bold">Cancelar</button>
+                                <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold" aria-label="Agregar">Agregar</button>
+                                <button type="reset" class="btn btn-personalized-1 mx-1 fw-bold" aria-label="Cancelar">Cancelar</button>
                             </div>
                         </form>
                     </div>
@@ -372,11 +372,11 @@
     <footer data-aos="fade-up">
         <section class="section-1">
             <article class="box-logo">
-                <a href="#">
+                <a href="../index.html" aria-label="Logo y nombre">
                     <div>
                         <img src="../img/Logo.png" alt="Logo-pie-de-pagina">
                     </div>
-                    <p>PetShop</p>
+                    <p>CarnetVet</p>
                 </a>
             </article>
             <article class="box-nosotros">
@@ -384,10 +384,10 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, impedit, et corrupti dolore, voluptate labore illo quaerat voluptatum obcaecati ipsum cum quasi eveniet. Accusantium est quo pariatur optio dolor minus.</p>
             </article>
             <article class="box-redes">
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" aria-label="Instragram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
             </article>
         </section>
         <section class="section-2">
