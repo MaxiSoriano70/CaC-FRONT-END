@@ -128,7 +128,7 @@ footer .section-2{
 
 @media (max-width:720px){
     footer .section-1{
-        flex-direction: column  ;
+        flex-direction: column ;
     }
 
     .section-1 .box-logo{
@@ -148,17 +148,21 @@ footer .section-2{
 }
 
 @media (max-width:400px){
+    footer .section-1{
+        padding: 10px;
+    }
+
     .section-1 .box-logo a div img{
         width: 35px;
         height: 35px;
     }
 
     .section-1 .box-logo a p{
-        font-size: 1.3rem;
+        font-size: 0.8rem;
     }
 
     .section-1 .box-nosotros h3{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .section-1 .box-nosotros p{
@@ -166,7 +170,7 @@ footer .section-2{
     }
 
     .section-1 .box-redes a i{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     footer .section-2{
