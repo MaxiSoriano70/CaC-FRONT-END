@@ -17,7 +17,6 @@
     --color-negro: #000;
 }
 
-
 header{
     display: flex;
     align-items: center;
@@ -170,11 +169,12 @@ header .contenedor{
 .contenedor .header-rigth .login-btn{
     text-transform: capitalize;
     font-size: 1rem;
+    font-weight: bolder;
     background-color: var(--color-complementario-I);
     color: var(--color-blanco);
     border: none;
     padding: 10px 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -186,11 +186,12 @@ header .contenedor{
 .contenedor .header-rigth .logout-btn{
     text-transform: capitalize;
     font-size: 1rem;
+    font-weight: bolder;
     background-color: var(--color-complementario-I);
     color: var(--color-blanco);
     border: none;
     padding: 10px 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     display: none;
 }
@@ -203,11 +204,12 @@ header .contenedor{
 .contenedor .header-rigth .open-menu-btn{
     text-transform: capitalize;
     font-size: 1rem;
+    font-weight: bolder;
     background-color: var(--color-complementario-I);
     color: var(--color-blanco);
     border: none;
     padding: 10px 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     display: none;
 }
@@ -216,7 +218,6 @@ header .contenedor{
     background-color: var(--color-complementario-II);
     transition: 0.2s linear;
 }
-
 
 @media (max-width:1100px) {
     .contenedor .menu{
@@ -251,11 +252,12 @@ header .contenedor{
     .contenedor .menu .head .close-menu-btn{
         text-transform: capitalize;
         font-size: 1rem;
+        font-weight: bolder;
         background-color: var(--color-complementario-I);
         color: var(--color-blanco);
         border: none;
         padding: 10px 15px;
-        border-radius: 15px;
+        border-radius: 10px;
         cursor: pointer;
     }
 
@@ -405,22 +407,26 @@ header .contenedor{
     }
 
     .contenedor .header-rigth .login-btn{
-        padding: 10px;
-        font-size: 0.8rem;
+        padding: 7.5px 10px;
+        font-size: 0.9rem;
+        border-radius: 5px;
     }
 
     .contenedor .header-rigth .logout-btn{
-        padding: 10px;
-        font-size: 0.8rem;
+        padding: 7.5px 10px;
+        font-size: 0.9rem;
+        border-radius: 5px;
     }
 
     .contenedor .header-rigth .open-menu-btn{
-        padding: 10px;
-        font-size: 0.8rem;
+        padding: 7.5px 10px;
+        font-size: 0.9rem;
+        border-radius: 5px;
     }
 
     .contenedor .header-rigth .close-menu-btn{
-        padding: 10px;
-        font-size: 0.8rem;
+        padding: 7.5px 10px;
+        font-size: 0.9rem;
+        border-radius: 5px;
     }
 }
