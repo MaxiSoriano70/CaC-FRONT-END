@@ -1,0 +1,87 @@
+:root {
+    --color-1: #456584;
+    --color-2: #3e5975;
+    --color-3: #6e94b9;
+    --color-4: #b1d1f1;
+    --color-5: #f09510;
+    --color-6: #f9d36c;
+    --color-7: #e38354;
+    --color-8: #e89d6d;
+    --color-fondo: #eaeef4;
+    --color-complementario-I : #E5507A;
+    --color-complementario-II : #ef7d9a;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-blanco: #fff;
+    --color-negro: #000;
+}
+
+.bg-color-fondo{
+    background-color: var(--color-fondo);
+}
+
+.bg-color-principal {
+    background-color: var(--color-1);
+}
+
+.bg-color-opuesto {
+    background-color: var(--color-complementario-I);
+}
+
+.btn-personalized-1 {
+    background-color: var(--color-5);
+    color: var(--color-negro);
+}
+
+.btn-personalized-1:hover {
+    background-color: var(--color-6);
+    color: var(--color-negro);
+}
+
+.btn-personalized-2 {
+    background-color: var(--color-7);
+    color: var(--color-negro);
+}
+
+.btn-personalized-2:hover {
+    background-color: var(--color-8);
+    color: var(--color-negro);
+}
+
+.btn-personalized-3 {
+    background-color: var(--color-complementario-I);
+    color: var(--color-blanco);
+}
+
+.btn-personalized-3:hover {
+    background-color: var(--color-complementario-II);
+    color: var(--color-blanco);
+}
+
+.btn-personalized-4 {
+    background-color: var(--color-1);
+    color: var(--color-blanco);
+}
+
+.btn-personalized-4:hover {
+    background-color: var(--color-2);
+    color: var(--color-blanco);
+}
+
+.bg-input {
+    border: 1.8px solid var(--color-3);
+}
+
+.bg-input:focus {
+    border: 2px solid var(--color-3);
+    box-shadow: 0 0 0 0.2rem var(--color-3);
+}
+
+.iconoRadioMacho{
+    color: var(--color-1);
+}
+
+.iconoRadioHembra{
+    color: var(--color-complementario-I);
+}
