@@ -39,31 +39,37 @@
 .nuestras-marcas .marcas .contenedor-logo .logo-royal-canin{
     width: 175px;
     height: 100px;
+    aspect-ratio: 1.75;
 }
 
 .nuestras-marcas .marcas .contenedor-logo .logo-purina{
     width: 175px;
     height: 100px;
+    aspect-ratio: 1.75;
 }
 
 .nuestras-marcas .marcas .contenedor-logo .logo-nexgard{
     width: 175px;
     height: 100px;
+    aspect-ratio: 1.75;
 }
 
 .nuestras-marcas .marcas .contenedor-logo .logo-bravexto{
     width: 175px;
     height: 100px;
+    aspect-ratio: 1.75;
 }
 
 .nuestras-marcas .marcas .contenedor-logo .logo-purina-pro-plan{
     width: 130px;
     height: 55px;
+    aspect-ratio: 2.3636;
 }
 
 .nuestras-marcas .marcas .contenedor-logo .logo-whiskas{
     width: 120px;
     height: 100px;
+    aspect-ratio: 1.2;
 }
 
 @media (max-width:630px) {
