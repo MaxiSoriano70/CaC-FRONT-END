@@ -3,13 +3,13 @@
     --color-2: #3e6389;
     --color-3: #6e94b9;
     --color-4: #b1d1f1;
-    --color-5: #005757;
-    --color-6: #1c7373;
-    --color-7: #ab5408;
-    --color-8: #b45908;
+    --color-5: #1c7373;
+    --color-6: #005757;
+    --color-7: #b45908;
+    --color-8: #ab5408;
     --color-fondo: #eaeef4;
-    --color-complementario-I : #b81941;
-    --color-complementario-II : #ce1d49;
+    --color-complementario-I : #ce1d49;
+    --color-complementario-II : #b81941;
     --color-success: #28a745;
     --color-warning: #ffc107;
     --color-danger: #dc3545;
@@ -21,12 +21,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     position: sticky;
     top: 0;
     padding: 15px 20px;
     width: 100%;
-    height: 75px;
+    height: auto;
     z-index: 10;
     background-color: var(--color-1);
 }
@@ -219,7 +218,7 @@ header .contenedor{
     transition: 0.2s linear;
 }
 
-@media (max-width:1100px) {
+@media (max-width:1125px) {
     .contenedor .menu{
         position: fixed;
         right: 0;
@@ -392,14 +391,14 @@ header .contenedor{
     }
 }
 
-@media (max-width:405px) {
+@media (max-width:440px) {
     .contenedor .logo a img{
         width: 35px;
         height: 35px;
     }
 
     .contenedor .logo a p{
-        display: none;
+        font-size: 1.2rem;
     }
 
     .contenedor .header-rigth > * {
@@ -407,12 +406,6 @@ header .contenedor{
     }
 
     .contenedor .header-rigth .login-btn{
-        padding: 7.5px 10px;
-        font-size: 0.9rem;
-        border-radius: 5px;
-    }
-
-    .contenedor .header-rigth .logout-btn{
         padding: 7.5px 10px;
         font-size: 0.9rem;
         border-radius: 5px;
@@ -428,5 +421,28 @@ header .contenedor{
         padding: 7.5px 10px;
         font-size: 0.9rem;
         border-radius: 5px;
+    }
+}
+
+@media (max-width:360px) {
+    .contenedor .logo a img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .contenedor .logo a p{
+        font-size: 1rem;
+    }
+
+    .contenedor .header-rigth .login-btn{
+        padding: 5px 7.5px;
+    }
+
+    .contenedor .header-rigth .open-menu-btn{
+        padding: 5px 7.5px;
+    }
+
+    .contenedor .header-rigth .close-menu-btn{
+        padding: 5px 7.5px;
     }
 }

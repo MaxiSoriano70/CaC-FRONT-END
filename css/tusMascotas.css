@@ -106,7 +106,7 @@
     width: 400px;
     height: 200px;
     background: linear-gradient(to right, var(--color-1), var(--color-2));
-    transform: rotate(-35deg);
+    transform: rotate(-25deg);
     top: -50px;
     left: -100px;
 }
@@ -116,14 +116,14 @@
     width: 400px;
     height: 200px;
     background: linear-gradient(to right, var(--color-complementario-I), var(--color-complementario-II));
-    transform: rotate(-35deg);
+    transform: rotate(-25deg);
     top: -50px;
     left: -100px;
 }
 
 .contenedor-mascotas .card .contenido h4{
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 10px 0px;
 }
 
 .contenedor-mascotas .card .contenido h5.al-dia{
@@ -186,9 +186,17 @@
 }
 
 @media (max-width:700px){
+    .tus-mascotas{
+        padding: 10px;
+    }
+
     .contenedor-mascotas .card{
-        width: 200px;
-        height: 300px;
+        width: 250px;
+        height: auto;
+    }
+
+    .contenedor-mascotas .card .contenido{
+        padding: 10px;
     }
 
     .contenedor-mascotas .card .contenido .img-pet{
@@ -202,19 +210,15 @@
     }
 
     .contenedor-mascotas .card .contenido span.perro{
-        position: absolute;
-        width: 400px;
+        width: 350px;
         height: 200px;
-        top: -150px;
-        left: -100px;
+        top: -85px;
     }
 
     .contenedor-mascotas .card .contenido span.gato{
-        position: absolute;
-        width: 400px;
+        width: 350px;
         height: 200px;
-        top: -150px;
-        left: -100px;
+        top: -85px;
     }
 
     .contenedor-mascotas .card .contenido h5.al-dia{
@@ -240,5 +244,63 @@
     .contenedor-mascotas .card .contenido .botones-mascotas .btn-editar-mascota{
         font-size: 0.8rem;
         margin: 5px 0px;
+    }
+}
+
+@media (max-width:560px){
+    .contenedor-mascotas .card{
+        width: 200px;
+    }
+
+    .contenedor-mascotas .card .contenido span.perro{
+        width: 300px;
+        height: 200px;
+        top: -100px;
+    }
+
+    .contenedor-mascotas .card .contenido span.gato{
+        width: 300px;
+        height: 200px;
+        top: -100px;
+    }
+}
+
+@media (max-width:460px){
+    .contenedor-mascotas .card{
+        width: 80%;
+    }
+
+    .contenedor-mascotas .card .contenido h4{
+        margin: 15px 0px 10px 0px;
+    }
+
+    .contenedor-mascotas .card .contenido span.perro{
+        width: 100%;
+        height: 210px;
+        top: -90px;
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+    .contenedor-mascotas .card .contenido span.gato{
+        width: 100%;
+        height: 210px;
+        top: -90px;
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+    .contenedor-mascotas .card .contenido .botones-mascotas{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedor-mascotas .card .contenido .botones-mascotas .btn-carnet{
+        margin: 5px;
+    }
+
+    .contenedor-mascotas .card .contenido .botones-mascotas .btn-editar-mascota{
+        margin: 5px;
     }
 }
