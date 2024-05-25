@@ -27,9 +27,11 @@
     <link rel="stylesheet" href="css/publicidadPeluqueria.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/bootstrap-personalizado.css">
+    <script src="js/login.js"></script>
     <title>CarnetVet</title>
 </head>
 <body class="container-fluid p-0">
+    <!-- Header -->
     <header>
         <section class="contenedor">
             <article class="logo">
@@ -72,8 +74,8 @@
                     <li>
                         <a href="#" aria-label="A cerca de nosotros"><i class="fa-solid fa-circle-info"></i> A cerca de nosotros</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" aria-label="Nombre usuario" onclick="event.preventDefault()"><i class="fa-solid fa-user"></i> Karen Dominguez</a>
+                    <li class="dropdown" id="opciones-usuario">
+                        <a href="#" aria-label="Nombre usuario" onclick="event.preventDefault()"><i class="fa-solid fa-user"></i> <span id="nombre-usuario"></span></a>
                         <i class="fa-solid fa-caret-down"></i>
                         <ul class="submenu">
                             <!-- Button modal Editar Perfil-->
@@ -86,11 +88,13 @@
             </nav>
             <article class="header-rigth">
                 <!-- Button modal Iniciar Sesión-->
-                <button type="button" class="login-btn" aria-label="Iniciar Sesión" data-bs-toggle="modal" data-bs-target="#iniciarSesionModal"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</button>
+                <button type="button" id="boton-iniciar-sesion" class="login-btn" aria-label="Iniciar Sesión" data-bs-toggle="modal" data-bs-target="#iniciarSesionModal"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</button>
                 <button type="button" class="open-menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
             </article>
         </section>
     </header>
+
+    <!-- Main -->
     <main>
         <!-- Carousel Mascotas -->
         <section id="carouselPet" class="carousel slide carousel-fade">
@@ -105,7 +109,8 @@
                         alt="filamento ecofilas">
                     <div class="d-flex align-items-center justify-content-center flex-column text-carrusel">
                         <h2 class="titulo-carrusel">Bienvenido a PetShop te ayudaremos a llevar el resgistro de vacunas de tus mascotas</h2>
-                        <button class="btn btn-p-slider-1" aria-label="Registarse" data-bs-toggle="modal" data-bs-target="#registrarseModal">Registrate</button>
+                        <button id="boton-registrarse" class="btn btn-p-slider-1" aria-label="Registarse" data-bs-toggle="modal" data-bs-target="#registrarseModal">Registrate</button>
+                        <a id="boton-mis-mascotas" href="./pages/misMascotas.html" class="btn btn-p-slider-1">Mis mascotas</a>
                     </div>
                 </div>
                 <div class="carousel-item container-img">
@@ -321,18 +326,24 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-color-fondo">
-                        <form>
+                        <form id="form-iniciar-sesion">
                             <div class="mb-3">
-                                <label for="email" class="form-label fw-bolder">Email</label>
-                                <input type="email" class="form-control bg-input" id="email" aria-describedby="emailHelp" placeholder="Ingrese su email"
+                                <label for="email-iniciar-sesion" class="form-label fw-bolder">Email</label>
+                                <input type="email" class="form-control bg-input" id="email-iniciar-sesion" aria-describedby="emailHelp" placeholder="Ingrese su email"
                                 minlength="8" maxlength="20" required>
+                                <div id="emailErrorIniciarSesion" class="form-text">
+                                    Email no valido.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label fw-bolder">Contraseña</label>
-                                <input type="password" class="form-control bg-input" id="password"
+                                <label for="password-iniciar-sesion" class="form-label fw-bolder">Contraseña</label>
+                                <input type="password" class="form-control bg-input" id="password-iniciar-sesion"
                                 placeholder="Ingrese su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 title="Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres"
                                 maxlength="20" minlength="8" required>
+                                <div id="emailErrorIniciarSesion" class="form-text">
+                                    Contraseña incorrecta
+                                </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
                                 <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold" aria-label="Ingresar">Ingresar</button>
@@ -353,41 +364,59 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body bg-color-fondo">
-                        <form>
+                        <form id="form-registro">
                             <div class="mb-3">
-                                <label for="email" class="form-label fw-bolder">Email</label>
-                                <input type="email" class="form-control bg-input" id="email" aria-describedby="emailHelp" placeholder="Ingrese su email"
+                                <label for="emailRegistro" class="form-label fw-bolder">Email</label>
+                                <input type="email" class="form-control bg-input" id="emailRegistro" aria-describedby="emailHelp" placeholder="Ingrese su email"
                                 minlength="8" maxlength="20" required>
+                                <div id="emailErrorRegistro" class="form-text">
+                                    Email no valido.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="nombre" class="form-label fw-bolder">Nombre y Apellido</label>
-                                <input type="text" class="form-control bg-input" id="nombre" placeholder="Ingrese su nombre y apellido"
+                                <label for="nombreApellidoRegistro" class="form-label fw-bolder">Nombre y Apellido</label>
+                                <input type="text" class="form-control bg-input" id="nombreApellidoRegistro" placeholder="Ingrese su nombre y apellido"
                                 minlength="3" maxlength="25" required>
+                                <div id="nombreApellidoErrorRegistro" class="form-text">
+                                    Nombre y Apellido no valido.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="telefono" class="form-label fw-bolder">Teléfono</label>
-                                <input type="tel" class="form-control bg-input" id="telefono" placeholder="Ingresa tu teléfono" maxlength="10" pattern="\d{10}" required>
+                                <label for="telefonoRegistro" class="form-label fw-bolder">Teléfono</label>
+                                <input type="tel" class="form-control bg-input" id="telefonoRegistro" placeholder="Ingresa tu teléfono" maxlength="10" pattern="\d{10}" required>
+                                <div id="telefonoErrorRegistro" class="form-text">
+                                    Teléfono no valido.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="fecha-nacimiento" class="form-label fw-bolder">Fecha de Nacimiento</label>
-                                <input type="date" class="form-control bg-input" id="fecha-nacimiento" placeholder="Ingrese su Fecha de Nacimiento" min="1900-01-01" max="2004-12-31" required>
+                                <label for="fechaNacimientoRegistro" class="form-label fw-bolder">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control bg-input" id="fechaNacimientoRegistro" placeholder="Ingrese su Fecha de Nacimiento" min="1900-01-01" max="2004-12-31" required>
+                                <div id="fechaNacimientoErrorRegistro" class="form-text">
+                                    Fecha de nacimiento no valida.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label fw-bolder">Contraseña</label>
-                                <input type="password" class="form-control bg-input" id="password"
+                                <label for="passwordRegistro" class="form-label fw-bolder">Contraseña</label>
+                                <input type="password" class="form-control bg-input" id="passwordRegistro"
                                 placeholder="Ingrese su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 title="Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres"
                                 maxlength="20" minlength="8" required>
+                                <div id="passwordErrorRegistro" class="form-text">
+                                    Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label fw-bolder">Repetir contraseña</label>
-                                <input type="password" class="form-control bg-input" id="password"
+                                <label for="passwordRegistroRepetir" class="form-label fw-bolder">Repetir contraseña</label>
+                                <input type="password" class="form-control bg-input" id="passwordRegistroRepetir"
                                 placeholder="Repita su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 title="Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres"
                                 maxlength="20" minlength="8" required>
+                                <div id="passwordRepetirErrorRegistro" class="form-text">
+                                    Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres.
+                                </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
-                                <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold" aria-label="Registrarse">Registrarse</button>
+                                <button type="submit" id="botonRegistrarse" class="btn btn-personalized-2 mx-1 fw-bold" aria-label="Registrarse">Registrarse</button>
                                 <button type="reset" class="btn btn-personalized-1 mx-1 fw-bold" aria-label="Cancelar">Cancelar</button>
                             </div>
                         </form>
@@ -485,5 +514,8 @@
     <!-- Script -->
     <script src="js/header.js"></script>
     <script src="js/alertas.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 </html>

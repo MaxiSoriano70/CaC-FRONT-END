@@ -85,3 +85,17 @@
 .iconoRadioHembra{
     color: var(--color-complementario-I);
 }
+
+.error {
+    color: var(--color-danger);
+    font-size: 0.8rem;
+    margin: 5px 0px;
+    padding: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.visible {
+    visibility: visible;
+    display: block;
+}

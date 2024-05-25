@@ -218,6 +218,14 @@ header .contenedor{
     transition: 0.2s linear;
 }
 
+#opciones-usuario{
+    visibility: hidden;
+}
+
+#boton-mis-mascotas{
+    visibility: hidden;
+}
+
 @media (max-width:1125px) {
     .contenedor .menu{
         position: fixed;
