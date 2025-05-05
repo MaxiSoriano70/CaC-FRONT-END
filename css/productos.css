@@ -1,0 +1,201 @@
+.sectionProductos{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloProductos{
+    margin-bottom: 10px;
+}
+
+.tituloProductos h2{
+    text-transform: uppercase;
+}
+
+.productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cardProducto{
+    position: relative;
+    background-color: white;
+    width: 350px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.imagen{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    place-items: center;
+}
+
+.imagen img{
+    width: 240px;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.cPrecio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.pTxt{
+    font-weight: 600;
+}
+
+.pNumero{
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.cCantidad{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cTxt{
+    font-weight: 600;
+}
+
+.cCantidadNumero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.cCantidadNumero span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-complementario-I);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.cCantidadNumero span:hover {
+    background-color: var(--color-complementario-II);
+}
+
+.cCantidadNumero .inputCantidad {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    background: var(--color-fondo);
+    outline: none;
+    margin: 0px 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.inputCantidad::-webkit-outer-spin-button,
+.inputCantidad::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputCantidad {
+    -moz-appearance: textfield;
+}
+
+.cBotones{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btnVerMas{
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: var(--color-5);
+    color: var(--color-blanco);
+    border: none;
+    padding: 7px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnVerMas:hover{
+    background-color: var(--color-6);
+    transition: 0.2s linear;
+}
+
+.btnAgregar{
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: var(--color-complementario-I);
+    color: var(--color-blanco);
+    border: none;
+    padding: 7px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnAgregar:hover{
+    background-color: var(--color-complementario-II);
+    transition: 0.2s linear;
+}
+
+@media (max-width:750px) {
+    .cardProducto{
+        width: 250px;
+        padding: 10px;
+    }
+
+    .imagen{
+        width: 100%;
+        height: 60%;
+        display: grid;
+        place-items: center;
+    }
+
+    .imagen img{
+        width: 200px;
+    }
+}
+
+@media (max-width:550px) {
+    .cardProducto{
+        width: 100%;
+        padding: 20px;
+    }
+}

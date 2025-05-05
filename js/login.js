@@ -6,7 +6,8 @@ window.addEventListener('load', function(){
     const contraseniaIniciarSesion = document.querySelector("#password-iniciar-sesion");
     const url = null;
 
-    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    emailIniciarSesion.addEventListener("input", e => validarMail(e));
+    contraseniaIniciarSesion.addEventListener("input", e=> validarContrasenia(e));
 
     formIniciarSesion.addEventListener('submit', function(event){
         event.preventDefault();
@@ -18,14 +19,13 @@ window.addEventListener('load', function(){
         }
 
         if(url == null ){
-            let usuario = buscarUsuario(payload);
-            if (usuario) {
-                console.log("Usuario encontrado:", usuario);
-                localStorage.setItem('usuario', JSON.stringify(usuario));
+            let usuarioEncontrado = buscarUsuario(payload);
+            if (usuarioEncontrado) {
+                localStorage.setItem('usuario', JSON.stringify(usuarioEncontrado));
                 Swal.fire({
                     icon: "success",
                     title: "¡Bienvenid@!",
-                    text: `${usuario.nombreApellido}`,
+                    text: `${usuarioEncontrado.nombreApellido}`,
                     showConfirmButton: false,
                     textColor: "#000",
                     background: "#eaeef4",
@@ -133,11 +133,11 @@ window.addEventListener('load', function(){
         let usuarios = [
             {
                 id: 1,
-                email: "karen@gmail.com",
-                nombreApellido: "Karen Dominguez",
+                email: "maxi@gmail.com",
+                nombreApellido: "Maxi Soriano",
                 telefono: "123-456-7890",
                 fechaDeNacimiento: "1997-06-05",
-                contrasenia: "Karen123"
+                contrasenia: "Maximo123"
             },
             {
                 id: 2,

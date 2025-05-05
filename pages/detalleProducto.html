@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carnet de Vacunas para tu Canino o Felino" />
+    <meta name="author" content="Maximiliano Soriano" />
+    <meta name="keywords" content="Carnet Vacunas para mascotas, vacunas de canino, vacunas de felino, vacunas para un perro, vacunas para un gato" />
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fuente Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/productoDetalle.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/bootstrap-personalizado.css">
+    <title>CarnetVet</title>
+</head>
+<body class="container-fluid p-0">
+    <header>
+        <section class="contenedor">
+            <article class="logo">
+                <a href="../index.html" aria-label="Logo y nombre">
+                    <img src="../img/Logo.png" alt="Logo PetShop">
+                    <p>PetShop</p>
+                </a>
+            </article>
+            <nav class="menu">
+                <article class="head">
+                    <div class="logo">
+                        <a href="../index.html" aria-label="Logo y nombre">
+                            <img src="../img/Logo.png" alt="Logo PetShop">
+                            <p>PetShop</p>
+                        </a>
+                    </div>
+                    <button type="button" class="close-menu-btn" aria-label="Cerrar menu"><i class="fa-regular fa-circle-xmark"></i></button>
+                </article>
+                <ul>
+                    <li>
+                        <a href="../index.html"><i class="fa-solid fa-house" aria-label="Home"></i> Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-label="Vacunas" onclick="event.preventDefault()"><i class="fa-solid fa-syringe"></i> Vacunas</a>
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#" aria-label="Caninos"><span><i class="fa-solid fa-dog"></i> Caninos</span></a></li>
+                            <li><a href="#" aria-label="Felinos"><span><i class="fa-solid fa-cat"></i> Felinos</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-label="Contacto" onclick="event.preventDefault()"><i class="fa-solid fa-envelope"></i> Contacto</a>
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#" aria-label="Whatsapp"><span><i class="fa-brands fa-whatsapp"></i> Whatsapp</span></a></li>
+                            <li><a href="#" aria-label="Instragram"><span><i class="fa-brands fa-instagram"></i> Instragram</span></a></li>
+                            <li><a href="#" aria-label="Facebook"><span><i class="fa-brands fa-facebook"></i> Facebook</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="A cerca de nosotros"><i class="fa-solid fa-circle-info"></i> A cerca de nosotros</a>
+                    </li>
+                    <li class="dropdown" id="opciones-usuario">
+                        <a href="#" aria-label="Nombre usuario" onclick="event.preventDefault()"><i class="fa-solid fa-user"></i> <span id="nombre-usuario"></span></a>
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <!-- Button modal Editar Perfil-->
+                            <li><a href="#" aria-label="Datos Personales" data-bs-toggle="modal" data-bs-target="#editarPerfilModal"><span><i class="fa-solid fa-user-pen"></i> Datos Personales</span></a></li>
+                            <li><a href="misMascotas.html" aria-label="Mis mascotas"><span><i class="fa-solid fa-paw"></i> Mis mascotas</span></a></li>
+                            <li><a href="#" aria-label="Cerrar Sesión" onclick="cerrarSesion()"><span><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <article class="header-rigth">
+                <button type="button" aria-label="Menu" class="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </article>
+        </section>
+    </header>
+    <main>
+        <section class="presentacion">
+            <article class="cardDetalle">
+                <div class="imagen">
+                    <img class="imgProducto" src="https://leocan.com.ar/wp-content/uploads/2021/09/Royal-apettite-control.jpg" alt="">
+                </div>
+                <div class="productoInfo">
+                    <h2>Alimento</h2>
+                    <p class="txtDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat molestias debitis modi porro? Quae voluptatibus consequatur ipsam corporis, excepturi sed ipsa error vitae quidem quasi obcaecati tempora distinctio totam est?</p>
+                    <div class="cPrecio"><span class="pTxt">Precio:</span><span class="pNumero">$ 1555</span></div>
+                    <div class="cCantidad">
+                        <span class="cTxt">Cantidad:</span><div class="cCantidadNumero">
+                        <span class="minimo">-</span>
+                        <input class="inputCantidad" type="number" name="" id="">
+                        <span class="maximo">+</span>
+                        </div>
+                    </div>
+                    <div class="cBotones">
+                        <button class="btnAgregar"><i class="fa-solid fa-cart-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer data-aos="fade-up">
+        <section class="section-1">
+            <article class="box-logo">
+                <a href="../index.html" aria-label="Logo y nombre">
+                    <div>
+                        <img src="../img/Logo.png" alt="Logo-pie-de-pagina">
+                    </div>
+                    <p>CarnetVet</p>
+                </a>
+            </article>
+            <article class="box-nosotros">
+                <h3>Sobre nosotros</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, impedit, et corrupti dolore, voluptate labore illo quaerat voluptatum obcaecati ipsum cum quasi eveniet. Accusantium est quo pariatur optio dolor minus.</p>
+            </article>
+            <article class="box-redes">
+                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" aria-label="Instragram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </article>
+        </section>
+        <section class="section-2">
+            <small>
+                &copy; 2024 <b>Maximiliano Soriano</b> - Todos los derechos reservados.
+            </small>
+        </section>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Sweetalert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script -->
+    <script src="../js/header.js"></script>
+    <script src="../js/alertas.js"></script>
+</body>
+</html>
